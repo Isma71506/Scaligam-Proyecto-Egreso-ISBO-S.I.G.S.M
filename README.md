@@ -1,0 +1,1 @@
+# Scaligam-Proyecto-Egreso-ISBO-S.I.G.S.M
