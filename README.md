@@ -6,7 +6,7 @@ Descripción
 
 Sistema desarrollado para el Hospital de Clínicas, compuesto por dos módulos a integrar en su panel principal.
 
-Módulo de gestión y digitalización de documentos para pacientes: permite a los funcionarios administrativos cargar informes y documentación médica por medio de códigos QR. Incluye un submódulo sobre encuestas de satisfacción.
+Módulo de gestión y digitalización de documentos para pacientes: permite a los funcionarios administrativos cargar informes y documentación médica que será visualizada por medio de códigos QR. Incluye un submódulo sobre encuestas de satisfacción.
 
 Módulo de Ambulancias/Traslados: gestiona y da seguimiento a los traslados por parte de ambulancias del hospital y de otros centros médicos que aportan, registrando información sobre el conductor, enfermero, paciente, estado del traslado, etc.
 
