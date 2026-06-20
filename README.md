@@ -29,14 +29,8 @@ Instalación y ejecución local
 
 Aclaración: Esa es la manera de ejecutar localmente lo que se tiene hasta el momento para la primera entrega, se profundizará en XAMPP y demás cuando se tenga la base de datos para entregas posteriores.
 
-Integrantes del equipo y roles
-
-Nombre              Rol
-
-Alejandro Muñoz     Coordinador de Proyecto
-Shalén Costante     Sub-Coordinador
-Ismael Girino       Integrante
-Santiago Lucas      Integrante
+Integrantes del equipo y sus roles: Alejandro Muñoz, Coordinador de Proyecto. Shalén Costante, Sub-Coordinador.
+Ismael Girino, Integrante. Santiago Lucas, Integrante
 
 Convenciones de commits
 
