@@ -1,0 +1,14 @@
+.vscode/*
+!.vscode/settings.json
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.log
+error_log
+ 
+config.local.php
+ 
+*~
+*.tmp
