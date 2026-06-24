@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta de satisfacción - Hospital de Clínicas</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/documentacion.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="visor-documento">
+      <div class="encabezado-doc">
+        <img
+          src="../assets/img/logo-hospital.svg"
+          alt="Logo Hospital de Clínicas"
+          class="logo-sidebar-doc"
+        />
+        <h1 class="h4">Encuesta de satisfacción</h1>
+        <p class="text-muted" style="font-size: 0.85rem">
+          Esta encuesta es anónima. Sus respuestas ayudan a mejorar nuestros
+          servicios.
+        </p>
+      </div>
+
+      <div class="card-panel">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Servicio recibido</label>
+            <select class="form-select" name="servicio" required>
+              <option value="" selected disabled>Seleccionar servicio</option>
+              <option value="nefrologia">Nefrología y trasplante</option>
+              <option value="cardiologia">Cardiología</option>
+              <option value="imagenologia">Imagenología</option>
+              <option value="ostomizados">
+                Atención a pacientes ostomizados
+              </option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label d-block"
+              >¿Cómo calificaría la atención recibida?</label
+            >
+            <div class="btn-group" role="group" aria-label="Calificación">
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal1"
+                value="1"
+              />
+              <label class="btn btn-outline-secondary" for="cal1">1</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal2"
+                value="2"
+              />
+              <label class="btn btn-outline-secondary" for="cal2">2</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal3"
+                value="3"
+              />
+              <label class="btn btn-outline-secondary" for="cal3">3</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal4"
+                value="4"
+              />
+              <label class="btn btn-outline-secondary" for="cal4">4</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal5"
+                value="5"
+              />
+              <label class="btn btn-outline-secondary" for="cal5">5</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal6"
+                value="6"
+              />
+              <label class="btn btn-outline-secondary" for="cal6">6</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal7"
+                value="7"
+              />
+              <label class="btn btn-outline-secondary" for="cal7">7</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal8"
+                value="8"
+              />
+              <label class="btn btn-outline-secondary" for="cal8">8</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal9"
+                value="9"
+              />
+              <label class="btn btn-outline-secondary" for="cal9">9</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="calificacion"
+                id="cal10"
+                value="10"
+              />
+              <label class="btn btn-outline-secondary" for="cal10">10</label>
+            </div>
+            <div
+              class="d-flex justify-content-between"
+              style="font-size: 0.75rem; max-width: 480px"
+            >
+              <span>Muy insatisfecho</span>
+              <span>Muy satisfecho</span>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"
+              >¿La información recibida fue clara?</label
+            >
+            <select class="form-select" name="claridad" required>
+              <option value="" selected disabled>Seleccionar una opción</option>
+              <option value="si">Sí, totalmente</option>
+              <option value="parcial">Parcialmente</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="comentarios" class="form-label"
+              >Comentarios adicionales (opcional)</label
+            >
+            <textarea
+              class="form-control"
+              id="comentarios"
+              name="comentarios"
+              rows="3"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-principal w-100">
+            Enviar encuesta
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

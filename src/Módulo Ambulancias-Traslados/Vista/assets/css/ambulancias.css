@@ -1,0 +1,194 @@
+/* ==========================================================================
+   SIGSM - Estilos compartidos para los paneles internos
+   (Documentación y Ambulancias). Mantiene la paleta celeste/blanco
+   usada en las pantallas de autenticación.
+   ========================================================================== */
+
+:root {
+  --color-sidebar-bg: #62A9EE;
+  --color-sidebar-bg-active: #4F95DC;
+  --color-fondo-panel: #F4F8FC;
+  --color-azul-acento: #8FC4F4;
+  --color-texto-oscuro: #1C2B36;
+  --color-texto-claro: #FFFFFF;
+  --color-borde-card: #E2E8F0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--color-fondo-panel);
+  color: var(--color-texto-oscuro);
+}
+
+/* Sidebar de navegación */
+.sidebar {
+  background-color: var(--color-sidebar-bg);
+  min-height: 100vh;
+  padding: 1.5rem 0;
+  color: var(--color-texto-claro);
+}
+
+.sidebar .logo-sidebar {
+  width: 60px;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.sidebar .nombre-sistema {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+
+.sidebar .nav-link {
+  color: var(--color-texto-claro);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar .nav-link.active {
+  background-color: var(--color-sidebar-bg-active);
+  font-weight: 600;
+  border-left: 4px solid #FFFFFF;
+}
+
+.sidebar .nav-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 1rem 1.5rem;
+}
+
+/* Contenido principal */
+.contenido-principal {
+  padding: 2rem 2.5rem;
+}
+
+.encabezado-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.encabezado-pagina h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Tarjetas */
+.card-panel {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-borde-card);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+/* Tablas */
+.table-panel thead {
+  background-color: var(--color-azul-acento);
+}
+
+.table-panel thead th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-texto-oscuro);
+  border-bottom: none;
+}
+
+.table-panel td {
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+/* Badges de estado */
+.badge-pendiente {
+  background-color: #FDE68A;
+  color: #92400E;
+}
+
+.badge-proceso {
+  background-color: #BFDBFE;
+  color: #1E40AF;
+}
+
+.badge-finalizado {
+  background-color: #BBF7D0;
+  color: #166534;
+}
+
+/* Botón principal reutilizado de autenticación */
+.btn-principal {
+  background-color: var(--color-azul-acento);
+  border: none;
+  color: var(--color-texto-oscuro);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-sidebar-bg-active);
+  color: var(--color-texto-claro);
+}
+
+/* Responsive: el sidebar se colapsa en mobile */
+@media (max-width: 767.98px) {
+  .sidebar {
+    min-height: auto;
+    padding: 1rem 0;
+  }
+
+  .contenido-principal {
+    padding: 1.25rem 1rem;
+  }
+
+  .encabezado-pagina {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* Vista mobile-first de documento por QR */
+.visor-documento {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+.visor-documento .encabezado-doc {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.visor-documento .logo-sidebar-doc {
+  width: 70px;
+  margin: 0 auto 0.75rem;
+  display: block;
+}
+
+.visor-documento .categoria-doc {
+  display: inline-block;
+  background-color: var(--color-azul-acento);
+  color: var(--color-texto-oscuro);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  margin-bottom: 0.75rem;
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguimiento de traslado - Ambulancias</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/ambulancias.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Sidebar -->
+        <nav class="col-12 col-md-3 col-lg-2 sidebar">
+          <img
+            src="../assets/img/logo-hospital.svg"
+            alt="Logo Hospital de Clínicas"
+            class="logo-sidebar"
+          />
+          <p class="nombre-sistema">SIGSM</p>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="panel-traslados.html"
+                >🚑 Traslados</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">🚘 Vehículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">👥 Personal</a>
+            </li>
+          </ul>
+          <div class="nav-divider"></div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../../../Servicios Comúnes/Autenticación/page/login.html"
+                >↩️ Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="col-12 col-md-9 col-lg-10 contenido-principal">
+          <div class="encabezado-pagina">
+            <h1>Seguimiento del traslado #0124</h1>
+            <span class="badge badge-proceso fs-6">En proceso</span>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-7 mb-3">
+              <div class="card-panel mb-3">
+                <h2 class="h6">Datos del traslado</h2>
+                <table class="table table-sm mb-0" style="font-size: 0.9rem">
+                  <tr>
+                    <td class="text-muted">Paciente</td>
+                    <td>Juan Pérez</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Origen</td>
+                    <td>Hospital de Clínicas</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Destino</td>
+                    <td>Sanatorio Americano</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Conductor</td>
+                    <td>Carlos Méndez</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Enfermero</td>
+                    <td>Lucía Bentancur</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Vehículo</td>
+                    <td>Ambulancia — Matrícula SAA 1234</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Hora de salida</td>
+                    <td>09:15</td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Hora estimada de llegada</td>
+                    <td>09:50</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="card-panel">
+                <h2 class="h6">Línea de tiempo</h2>
+                <ul class="list-unstyled" style="font-size: 0.9rem">
+                  <li class="mb-3">
+                    <span class="badge badge-finalizado">✓</span>
+                    Solicitud registrada — 08:50
+                  </li>
+                  <li class="mb-3">
+                    <span class="badge badge-finalizado">✓</span>
+                    Salida del Hospital de Clínicas — 09:15
+                  </li>
+                  <li class="mb-3">
+                    <span class="badge badge-proceso">●</span>
+                    En tránsito hacia destino
+                  </li>
+                  <li class="mb-3 text-muted">
+                    <span class="badge bg-light text-dark border">○</span>
+                    Llegada a destino
+                  </li>
+                  <li class="text-muted">
+                    <span class="badge bg-light text-dark border">○</span>
+                    Retorno al hospital
+                  </li>
+                </ul>
+
+                <button type="button" class="btn btn-principal w-100 mt-2">
+                  Actualizar estado
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

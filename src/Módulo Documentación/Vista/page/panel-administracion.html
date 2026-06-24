@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de administración - Documentación</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/documentacion.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Sidebar -->
+        <nav class="col-12 col-md-3 col-lg-2 sidebar">
+          <img
+            src="../assets/img/logo-hospital.svg"
+            alt="Logo Hospital de Clínicas"
+            class="logo-sidebar"
+          />
+          <p class="nombre-sistema">SIGSM</p>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="panel-administracion.html"
+                >📄 Documentos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">📊 Encuestas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">⚙️ Categorías</a>
+            </li>
+          </ul>
+          <div class="nav-divider"></div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../../../Servicios Comúnes/autenticación/page/login.html"
+                >↩️ Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="col-12 col-md-9 col-lg-10 contenido-principal">
+          <div class="encabezado-pagina">
+            <h1>Gestión de documentos</h1>
+            <button
+              type="button"
+              class="btn btn-principal"
+              data-bs-toggle="modal"
+              data-bs-target="#modalNuevoDocumento"
+            >
+              + Cargar documento
+            </button>
+          </div>
+
+          <div class="card-panel">
+            <div class="table-responsive">
+              <table class="table table-panel">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Categoría</th>
+                    <th>Fecha de creación</th>
+                    <th>Código QR</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Indicaciones de interrupción voluntaria del embarazo
+                    </td>
+                    <td>Ginecología</td>
+                    <td>12/06/2026</td>
+                    <td>
+                      <span class="badge bg-light text-dark border"
+                        >Ver QR</span
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-primary text-decoration-none me-2"
+                        >Editar</a
+                      >
+                      <a href="#" class="text-danger text-decoration-none"
+                        >Eliminar</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Indicaciones para pacientes en tratamiento con warfarina
+                    </td>
+                    <td>Cardiología</td>
+                    <td>10/06/2026</td>
+                    <td>
+                      <span class="badge bg-light text-dark border"
+                        >Ver QR</span
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-primary text-decoration-none me-2"
+                        >Editar</a
+                      >
+                      <a href="#" class="text-danger text-decoration-none"
+                        >Eliminar</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pauta para pacientes ostomizados</td>
+                    <td>Enfermería</td>
+                    <td>05/06/2026</td>
+                    <td>
+                      <span class="badge bg-light text-dark border"
+                        >Ver QR</span
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-primary text-decoration-none me-2"
+                        >Editar</a
+                      >
+                      <a href="#" class="text-danger text-decoration-none"
+                        >Eliminar</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Preparación para estudios imagenológicos</td>
+                    <td>Imagenología</td>
+                    <td>01/06/2026</td>
+                    <td>
+                      <span class="badge bg-light text-dark border"
+                        >Ver QR</span
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-primary text-decoration-none me-2"
+                        >Editar</a
+                      >
+                      <a href="#" class="text-danger text-decoration-none"
+                        >Eliminar</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modal: cargar nuevo documento -->
+    <div class="modal fade" id="modalNuevoDocumento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cargar nuevo documento</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formNuevoDocumento">
+              <div class="mb-3">
+                <label for="tituloDoc" class="form-label"
+                  >Título del documento</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="tituloDoc"
+                  name="titulo"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="categoriaDoc" class="form-label">Categoría</label>
+                <select
+                  class="form-select"
+                  id="categoriaDoc"
+                  name="categoria"
+                  required
+                >
+                  <option value="" selected disabled>
+                    Seleccionar categoría
+                  </option>
+                  <option value="ginecologia">Ginecología</option>
+                  <option value="cardiologia">Cardiología</option>
+                  <option value="enfermeria">Enfermería</option>
+                  <option value="imagenologia">Imagenología</option>
+                  <option value="nefrologia">Nefrología</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="archivoDoc" class="form-label">Archivo (PDF)</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="archivoDoc"
+                  name="archivo"
+                  accept="application/pdf"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              form="formNuevoDocumento"
+              class="btn btn-principal"
+            >
+              Guardar documento
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

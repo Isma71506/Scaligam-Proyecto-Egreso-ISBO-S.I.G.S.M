@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de gestión - Ambulancias</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/ambulancias.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Sidebar -->
+        <nav class="col-12 col-md-3 col-lg-2 sidebar">
+          <img
+            src="../assets/img/logo-hospital.svg"
+            alt="Logo Hospital de Clínicas"
+            class="logo-sidebar"
+          />
+          <p class="nombre-sistema">SIGSM</p>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="panel-traslados.html"
+                >🚑 Traslados</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">🚘 Vehículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">👥 Personal</a>
+            </li>
+          </ul>
+          <div class="nav-divider"></div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../../../Servicios Comúnes/Autenticación/page/login.html"
+                >↩️ Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="col-12 col-md-9 col-lg-10 contenido-principal">
+          <div class="encabezado-pagina">
+            <h1>Gestión de traslados</h1>
+            <a href="alta-traslado.html" class="btn btn-principal"
+              >+ Nuevo traslado</a
+            >
+          </div>
+
+          <div class="card-panel">
+            <div class="table-responsive">
+              <table class="table table-panel">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Paciente / elemento</th>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>Conductor</th>
+                    <th>Hora salida</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#0124</td>
+                    <td>Paciente — Juan Pérez</td>
+                    <td>Hospital de Clínicas</td>
+                    <td>Sanatorio Americano</td>
+                    <td>Carlos Méndez</td>
+                    <td>09:15</td>
+                    <td><span class="badge badge-proceso">En proceso</span></td>
+                    <td>
+                      <a
+                        href="seguimiento-traslado.html"
+                        class="text-primary text-decoration-none"
+                        >Ver seguimiento</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#0123</td>
+                    <td>Equipo médico — Ecógrafo portátil</td>
+                    <td>Hospital de Clínicas</td>
+                    <td>Centro de Nefrología</td>
+                    <td>Ana Souza</td>
+                    <td>08:40</td>
+                    <td>
+                      <span class="badge badge-pendiente">Pendiente</span>
+                    </td>
+                    <td>
+                      <a
+                        href="seguimiento-traslado.html"
+                        class="text-primary text-decoration-none"
+                        >Ver seguimiento</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#0122</td>
+                    <td>Paciente — María Fernández</td>
+                    <td>Domicilio particular</td>
+                    <td>Hospital de Clínicas</td>
+                    <td>Carlos Méndez</td>
+                    <td>07:50</td>
+                    <td>
+                      <span class="badge badge-finalizado">Finalizado</span>
+                    </td>
+                    <td>
+                      <a
+                        href="seguimiento-traslado.html"
+                        class="text-primary text-decoration-none"
+                        >Ver seguimiento</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

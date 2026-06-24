@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear cuenta - Hospital de Clínicas</title>
+
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/auth.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Panel institucional -->
+        <div class="col-12 col-md-5 panel-institucional order-1">
+          <img
+            src="../../assets/img/logo-hospital.svg"
+            alt="Logo Hospital de Clínicas"
+            class="logo-hospital"
+          />
+          <p class="nombre-hospital mb-0">HOSPITAL DE CLINICAS</p>
+          <p class="subtitulo-hospital">Dr. Manuel Quintela</p>
+          <img
+            src="../../assets/img/hospital-fachada.png"
+            alt="Fachada del Hospital de Clínicas"
+            class="foto-fachada"
+          />
+        </div>
+
+        <!-- Panel formulario -->
+        <div class="col-12 col-md-7 panel-formulario order-2">
+          <h2 class="titulo-formulario">Crea una cuenta nueva</h2>
+          <a href="login.html" class="enlace-secundario"
+            >¿Ya estás registrado? Inicia sesión.</a
+          >
+          <hr />
+
+          <form class="mx-auto" style="max-width: 380px; width: 100%">
+            <!-- Selector de tipo de usuario -->
+            <ul
+              class="nav nav-pills mb-4 justify-content-center"
+              id="tipoUsuarioTabs"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="tab-paciente"
+                  data-bs-toggle="pill"
+                  data-bs-target="#form-paciente"
+                  type="button"
+                  role="tab"
+                >
+                  Paciente
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tab-administrativo"
+                  data-bs-toggle="pill"
+                  data-bs-target="#form-administrativo"
+                  type="button"
+                  role="tab"
+                >
+                  Personal administrativo
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <!-- Formulario paciente: nombre, correo, contraseña, fecha de nacimiento -->
+              <div
+                class="tab-pane fade show active"
+                id="form-paciente"
+                role="tabpanel"
+              >
+                <div class="mb-3">
+                  <label for="nombrePaciente" class="form-label"
+                    >Escribe tu nombre</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombrePaciente"
+                    name="nombre"
+                    placeholder="Jimena Martínez"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="correoPaciente" class="form-label"
+                    >Escribe un correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="correoPaciente"
+                    name="correo"
+                    placeholder="hola@sitioincreible.com"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="claveePaciente" class="form-label"
+                    >Escribe una contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="claveePaciente"
+                    name="contrasena"
+                    placeholder="••••••"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="fechaNacPaciente" class="form-label"
+                    >Escribe tu fecha de nacimiento</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="fechaNacPaciente"
+                    name="fecha_nacimiento"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-principal">
+                  REGISTRARSE
+                </button>
+              </div>
+
+              <!-- Formulario administrativo: nombre, correo, contraseña, cédula -->
+              <div
+                class="tab-pane fade"
+                id="form-administrativo"
+                role="tabpanel"
+              >
+                <div class="mb-3">
+                  <label for="nombreAdmin" class="form-label"
+                    >Escribe tu nombre</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombreAdmin"
+                    name="nombre"
+                    placeholder="Jimena Martínez"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="correoAdmin" class="form-label"
+                    >Escribe un correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="correoAdmin"
+                    name="correo"
+                    placeholder="atencionalusuario@hc.edu.uy"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="claveAdmin" class="form-label"
+                    >Escribe una contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="claveAdmin"
+                    name="contrasena"
+                    placeholder="••••••"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="cedulaAdmin" class="form-label"
+                    >Cedula de identidad</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cedulaAdmin"
+                    name="cedula"
+                    placeholder="66454545"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-principal">
+                  REGISTRARSE
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

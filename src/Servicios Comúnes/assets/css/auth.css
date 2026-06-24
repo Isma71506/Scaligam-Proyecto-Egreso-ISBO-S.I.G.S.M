@@ -1,0 +1,139 @@
+/* ==========================================================================
+   SIGSM - Autenticación
+   Hoja de estilos para las pantallas de registro, inicio de sesión
+   y recuperación de contraseña.
+   ========================================================================== */
+
+:root {
+  --color-panel-bg: #8FC4F4;
+  --color-azul-titulo: #62A9EE;
+  --color-azul-boton: #8FC4F4;
+  --color-azul-boton-hover: #6FAFEC;
+  --color-texto-oscuro: #1C2B36;
+  --color-texto-label: #6B7280;
+  --color-borde-input: #D1D5DB;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--color-texto-oscuro);
+}
+
+/* Panel izquierdo con logo e imagen institucional */
+.panel-institucional {
+  background-color: var(--color-panel-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.panel-institucional .logo-hospital {
+  width: 110px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.panel-institucional .nombre-hospital {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.12em;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.panel-institucional .subtitulo-hospital {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.18em;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.panel-institucional .foto-fachada {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 1.25rem;
+  border: 6px solid #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Panel derecho con el formulario */
+.panel-formulario {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem;
+}
+
+.panel-formulario .titulo-formulario {
+  color: var(--color-azul-titulo);
+  font-weight: 600;
+  text-align: center;
+}
+
+.panel-formulario .enlace-secundario {
+  color: var(--color-azul-titulo);
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.panel-formulario .enlace-secundario:hover {
+  text-decoration: underline;
+}
+
+.panel-formulario hr {
+  margin: 1.5rem 0 2rem 0;
+  border-top: 1px solid #CBD5E1;
+}
+
+.panel-formulario label {
+  font-size: 0.85rem;
+  color: var(--color-texto-label);
+  margin-bottom: 0.25rem;
+}
+
+.panel-formulario .form-control {
+  border: 1px solid var(--color-borde-input);
+  border-radius: 0.4rem;
+  padding: 0.7rem 0.85rem;
+}
+
+.panel-formulario .form-control:focus {
+  border-color: var(--color-azul-titulo);
+  box-shadow: 0 0 0 0.2rem rgba(98, 169, 238, 0.25);
+}
+
+.btn-principal {
+  background-color: var(--color-azul-boton);
+  border: none;
+  color: var(--color-texto-oscuro);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 280px;
+  margin: 1.5rem auto 0;
+  display: block;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-azul-boton-hover);
+  color: var(--color-texto-oscuro);
+}
+
+/* Versión mobile (mobile-first): el panel institucional pasa a ser
+   la pantalla de bienvenida, con el botón de Registrarse/Iniciar sesión */
+@media (max-width: 767.98px) {
+  .panel-formulario {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .panel-institucional {
+    padding: 2.5rem 1.5rem;
+  }
+}

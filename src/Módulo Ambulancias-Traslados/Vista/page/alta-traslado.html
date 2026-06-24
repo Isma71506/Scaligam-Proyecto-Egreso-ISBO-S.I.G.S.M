@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo traslado - Ambulancias</title>
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/ambulancias.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Sidebar -->
+        <nav class="col-12 col-md-3 col-lg-2 sidebar">
+          <img
+            src="../assets/img/logo-hospital.svg"
+            alt="Logo Hospital de Clínicas"
+            class="logo-sidebar"
+          />
+          <p class="nombre-sistema">SIGSM</p>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="panel-traslados.html"
+                >🚑 Traslados</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">🚘 Vehículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">👥 Personal</a>
+            </li>
+          </ul>
+          <div class="nav-divider"></div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../../../Servicios Comúnes/Autenticación/page/login.html"
+                >↩️ Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="col-12 col-md-9 col-lg-10 contenido-principal">
+          <div class="encabezado-pagina">
+            <h1>Nueva solicitud de traslado</h1>
+          </div>
+
+          <div class="card-panel" style="max-width: 720px">
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="form-label">Tipo de elemento a trasladar</label>
+                  <select
+                    class="form-select"
+                    name="tipo_elemento"
+                    id="tipoElemento"
+                    required
+                  >
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="paciente">Paciente</option>
+                    <option value="equipamiento">
+                      Equipamiento médico / insumo
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Vehículo requerido</label>
+                  <select class="form-select" name="vehiculo" required>
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="ambulancia">Ambulancia</option>
+                    <option value="auto">Vehículo institucional</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="cedulaPaciente" class="form-label"
+                  >Cédula del paciente (datos obtenidos desde el sistema del
+                  hospital)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cedulaPaciente"
+                  name="cedula_paciente"
+                  placeholder="Ej: 45123456"
+                />
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="form-label">Conductor asignado</label>
+                  <select class="form-select" name="conductor" required>
+                    <option value="" selected disabled>
+                      Seleccionar conductor
+                    </option>
+                    <option value="carlos">Carlos Méndez</option>
+                    <option value="ana">Ana Souza</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Enfermero acompañante</label>
+                  <select class="form-select" name="enfermero" required>
+                    <option value="" selected disabled>
+                      Seleccionar enfermero
+                    </option>
+                    <option value="lucia">Lucía Bentancur</option>
+                    <option value="pablo">Pablo Acosta</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="origenTraslado" class="form-label"
+                  >Punto de origen</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="origenTraslado"
+                  name="origen"
+                  placeholder="Hospital de Clínicas"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="destinoTraslado" class="form-label">Destino</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="destinoTraslado"
+                  name="destino"
+                  required
+                />
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="horaSalida" class="form-label"
+                    >Hora estimada de salida</label
+                  >
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="horaSalida"
+                    name="hora_salida"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="horaLlegada" class="form-label"
+                    >Hora estimada de llegada</label
+                  >
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="horaLlegada"
+                    name="hora_llegada"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="observaciones" class="form-label"
+                  >Observaciones</label
+                >
+                <textarea
+                  class="form-control"
+                  id="observaciones"
+                  name="observaciones"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-principal">
+                Registrar traslado
+              </button>
+              <a
+                href="panel-traslados.html"
+                class="btn btn-outline-secondary ms-2"
+                >Cancelar</a
+              >
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

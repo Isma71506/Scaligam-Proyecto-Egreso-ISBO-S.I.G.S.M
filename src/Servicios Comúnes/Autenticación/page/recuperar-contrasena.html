@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar contraseña - Hospital de Clínicas</title>
+
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/auth.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Panel institucional -->
+        <div class="col-12 col-md-5 panel-institucional order-1">
+          <img
+            src="../../assets/img/logo-hospital.svg"
+            alt="Logo Hospital de Clínicas"
+            class="logo-hospital"
+          />
+          <p class="nombre-hospital mb-0">HOSPITAL DE CLINICAS</p>
+          <p class="subtitulo-hospital">Dr. Manuel Quintela</p>
+          <img
+            src="../../assets/img/hospital-fachada.png"
+            alt="Fachada del Hospital de Clínicas"
+            class="foto-fachada"
+          />
+        </div>
+
+        <!-- Panel formulario -->
+        <div class="col-12 col-md-7 panel-formulario order-2">
+          <h2 class="titulo-formulario">¿Olvidaste la contraseña?</h2>
+          <p class="text-center" style="color: var(--color-azul-titulo)">
+            Nueva contraseña
+          </p>
+          <hr />
+
+          <form class="mx-auto" style="max-width: 380px; width: 100%">
+            <div class="mb-3">
+              <label for="correoRecuperar" class="form-label"
+                >Escribe un correo electrónico</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="correoRecuperar"
+                name="correo"
+                placeholder="hola@sitioincreible.com"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-principal">ENVIAR</button>
+
+            <p class="text-center mt-4" style="font-size: 0.9rem">
+              <a href="login.html" class="enlace-secundario d-inline"
+                >Volver a iniciar sesión</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
